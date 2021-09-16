@@ -80,7 +80,7 @@ export default class Editmovie extends Component {
       });
 
     // Redirect to movie List
-    this.props.history.push("/movie-list");
+    this.props.history.push("https://movierental111.herokuapp.com/movie-list");
   }
 
   render() {

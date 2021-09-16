@@ -34,7 +34,10 @@ export default class customerTableRow extends Component {
         <td>
           <Link
             className="edit-link"
-            to={"/edit-customer/" + this.props.obj._id}
+            to={
+              "https://movierental111.herokuapp.com/edit-customer/" +
+              this.props.obj._id
+            }
           >
             Edit
           </Link>

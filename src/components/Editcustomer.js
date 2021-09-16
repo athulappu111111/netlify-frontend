@@ -87,7 +87,9 @@ export default class Editcustomer extends Component {
       });
 
     // Redirect to customer List
-    this.props.history.push("/customer-list");
+    this.props.history.push(
+      "https://movierental111.herokuapp.com/customer-list"
+    );
   }
 
   render() {
