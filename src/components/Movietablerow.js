@@ -31,7 +31,13 @@ export default class Movietablerow extends Component {
         <td>{this.props.obj.dailyrental}</td>
         <td>{this.props.obj.noofcopies}</td>
         <td>
-          <Link className="edit-link" to={"/edit-movie/" + this.props.obj._id}>
+          <Link
+            className="edit-link"
+            to={
+              "https://movierental111.herokuapp.com/movies/edit-movie/" +
+              this.props.obj._id
+            }
+          >
             Edit
           </Link>
           <Button onClick={this.deletemovie} size="sm" variant="danger">

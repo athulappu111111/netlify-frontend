@@ -35,7 +35,7 @@ export default class customerTableRow extends Component {
           <Link
             className="edit-link"
             to={
-              "https://movierental111.herokuapp.com/edit-customer/" +
+              "https://movierental111.herokuapp.com/customers/edit-customer/" +
               this.props.obj._id
             }
           >
