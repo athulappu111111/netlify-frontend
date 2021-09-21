@@ -11,10 +11,7 @@ export default class customerTableRow extends Component {
 
   deletecustomer() {
     axios
-      .delete(
-        "https://movierental111.herokuapp.com/customers/delete-customer" +
-          this.props.obj._id
-      )
+      .delete("/customers/delete-customer" + this.props.obj._id)
       .then((res) => {
         console.log("customer successfully deleted!");
       })
@@ -34,10 +31,7 @@ export default class customerTableRow extends Component {
         <td>
           <Link
             className="edit-link"
-            to={
-              "https://movierental111.herokuapp.com/customers/edit-customer/" +
-              this.props.obj._id
-            }
+            to={"/customers/edit-customer/" + this.props.obj._id}
           >
             Edit
           </Link>

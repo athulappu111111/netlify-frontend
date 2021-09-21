@@ -26,10 +26,7 @@ export default class Editcustomer extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://movierental111.herokuapp.com/customers/edit-customer" +
-          this.props.match.params.id
-      )
+      .get("/customers/edit-customer" + this.props.match.params.id)
       .then((res) => {
         this.setState({
           fname: res.data.fname,
@@ -74,8 +71,7 @@ export default class Editcustomer extends Component {
 
     axios
       .put(
-        "https://movierental111.herokuapp.com/customers/update-customer/" +
-          this.props.match.params.id,
+        "/customers/update-customer/" + this.props.match.params.id,
         customerObject
       )
       .then((res) => {
@@ -87,9 +83,7 @@ export default class Editcustomer extends Component {
       });
 
     // Redirect to customer List
-    this.props.history.push(
-      "https://movierental111.herokuapp.com/customer-list"
-    );
+    this.props.history.push("/customer-list");
   }
 
   render() {
